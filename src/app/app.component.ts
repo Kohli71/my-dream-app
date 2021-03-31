@@ -1,4 +1,3 @@
-import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MY APPLICATION';
+  title = '...MY APPLICATION...';
+  todaydate = new Date();
+  jsonval = {name:'Kohli', age:'32', address: {a1:'Delhi', a2:'Bangalore'}};
   months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
   isavailable = true;
 
