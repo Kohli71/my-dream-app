@@ -35,6 +35,10 @@ export class AppComponent {
     this.todaydate = this.myservice.showTodayDate();
     this.myservice.serviceProperty = "Componenet is changed";
     this.componentProperty = this.myservice.serviceProperty;
-    
   }
+
+  onClickSubmit(data: { emailid: string; }){
+    alert('Entered Email Id is ' + data.emailid);
+  }
+
 }

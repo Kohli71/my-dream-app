@@ -71,9 +71,16 @@
     <a routerLink = "/contactus">Contact Us </a> 
  </nav> 
  
+ <div>
+
  <p>{{todaydate}}</p><br/>
  <p>{{componentProperty}}</p>
 
-
+ <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+     <input type="text" name="emailid" placeholder="Email ID" ngModel><br/>
+     <input type="password" name="password" placeholder="Password" ngModel><br/>
+     <input type="submit" value="Login">
+ </form>
+</div>
 <app-new-cmp></app-new-cmp>
 <router-outlet></router-outlet>
