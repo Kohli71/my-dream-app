@@ -11,6 +11,7 @@ import { SqrtPipe } from './new-cmp/app.sqrt';
 import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { MyserviceService } from './myservice.service';
     SqrtPipe,
     HomeComponent,
     ContactusComponent,
-    RoutingComponent 
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]

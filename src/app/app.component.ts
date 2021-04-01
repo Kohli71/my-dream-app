@@ -6,7 +6,9 @@ import { MyserviceService } from './myservice.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+  
   title = '...MY APPLICATION...';
   todaydate = new Date();
   jsonval = {name:'Kohli', age:'32', address: {a1:'Delhi', a2:'Bangalore'}};
@@ -25,8 +27,14 @@ export class AppComponent {
     console.log(event);
   }
 
+  componentProperty: any;
+  public persondata = [];
   constructor(private myservice: MyserviceService){}
   ngOnInit(){
+    
     this.todaydate = this.myservice.showTodayDate();
+    this.myservice.serviceProperty = "Componenet is changed";
+    this.componentProperty = this.myservice.serviceProperty;
+    
   }
 }
